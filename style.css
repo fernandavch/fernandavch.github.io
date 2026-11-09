@@ -1,0 +1,169 @@
+/* LANDING V3 */
+
+:root {
+  /* NEUTRAL GRAYS */
+  --bg: #0d0d0d;
+  --bg-alt: #151515;        /* ALT SECTION BG */
+  --text: #ececec;
+  --muted: #a3a3a3;
+  --line: #2a2a2a;
+  --accent: #ef4444;        /* ACCENT TEXT */
+  --accent-strong: #c62828; /* ACCENT FILL */
+  --width: 760px;           /* CONTENT WIDTH */
+  --font: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; border-radius: 0; }
+
+/* ANCHOR OFFSET */
+html { scroll-padding-top: 7rem; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+@media (hover: hover) { a:hover { color: #fff; } }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.skip {
+  position: absolute; left: -999px; top: 0; z-index: 20;
+  background: var(--accent-strong); color: #fff; padding: .5rem 1rem;
+}
+.skip:focus { left: 0; }
+
+/* CONTENT WRAP */
+.wrap { max-width: var(--width); margin: 0 auto; padding: 0 1.5rem; }
+
+/* HEADER */
+.site {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.site .wrap {
+  display: flex; flex-direction: column; align-items: center;
+  gap: .5rem; padding-top: calc(.75rem + 5px); padding-bottom: calc(.75rem + 5px);}
+.brand { color: var(--text); text-decoration: none; font-weight: 700; text-align: center; }
+@media (hover: hover) { .brand:hover { color: var(--text); } }
+.brand span { color: var(--accent); }
+
+.site nav ul {
+  list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+  gap: .25rem; margin: 0; padding: 0;
+}
+.site nav a {
+  display: block; padding: .35rem .75rem;
+  color: var(--muted); text-decoration: none; font-size: .8rem;
+  text-transform: uppercase; letter-spacing: .05em;
+  transition: background-color .15s, color .15s;
+}
+.site nav a { -webkit-tap-highlight-color: transparent; }
+.site nav a.active { background: var(--accent-strong); color: #fff; }
+/* HOVER MOUSE ONLY */
+@media (hover: hover) {
+  .site nav a:hover { background: var(--accent-strong); color: #fff; }
+}
+/* LANGUAGE BUTTON */
+.site nav li.lang { margin-left: .5rem; padding-left: .5rem; border-left: 1px solid var(--line); }
+
+/* HERO */
+.hero { padding: 3rem 0 4rem; }
+.hero .wrap { display: flex; align-items: center; gap: 2.5rem; }
+.hero .wrap > div { flex: 1; min-width: 0; }
+/* AVATAR PLACEHOLDER */
+.avatar-slot { width: 144px; height: 144px; }
+.hero .wrap > .avatar-slot { flex: none; }  /* AVATAR NO STRETCH */
+.avatar { display: block; width: 100%; height: 100%; object-fit: cover; }
+.avatar-slot.missing {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-alt); border: 1px dashed #3a3a3a;
+  color: var(--muted); font-size: .75rem; text-align: center; line-height: 1.4;
+}
+.avatar-slot.missing::after { content: "Avatar\A pendiente"; white-space: pre; }
+h1 { font-size: 1.9rem; line-height: 1.2; font-weight: 700; margin: 0 0 .25rem; }
+.role { color: var(--accent); margin: 0 0 1.25rem; }
+.links { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; margin-top: 1.75rem; }
+.btn {
+  display: inline-block; background: var(--accent-strong); color: #fff;
+  padding: .6rem 1.2rem; text-decoration: none; font-weight: 500;
+}
+@media (hover: hover) { .btn:hover { background: #a82020; color: #fff; } }
+
+/* CONTACT BUTTONS */
+.contact-list { list-style: none; display: flex; flex-wrap: wrap; gap: .75rem; margin: 0; padding: 0; }
+.contact-list a {
+  display: block; padding: .5rem 1.1rem;
+  color: var(--text); text-decoration: none; font-size: .9rem; font-weight: 500;
+  border: 1px solid var(--muted);
+  transition: border-color .15s, color .15s;
+}
+@media (hover: hover) { .contact-list a:hover { border-color: var(--accent); color: var(--accent); } }
+
+/* SECTIONS */
+section { padding: 3.5rem 0; }
+main > section:nth-of-type(odd) { background: var(--bg-alt); }
+
+h2 {
+  font-size: 1.25rem; font-weight: 700; color: var(--accent);
+  text-transform: uppercase; letter-spacing: .06em; margin: 0 0 1.5rem;
+}
+h3 { font-size: 1rem; font-weight: 500; margin: 1.5rem 0 .25rem; }
+section h3:first-of-type { margin-top: 0; }
+p { margin: 0 0 1rem; text-align: justify; hyphens: auto; }
+.muted { color: var(--muted); }
+.meta { color: var(--muted); font-size: .85rem; }
+
+/* BULLET LISTS */
+ul.plain { list-style: disc; margin: 0 0 1rem; padding-left: 1.25rem; }
+ul.plain li { margin-bottom: .75rem; padding-left: .25rem; }
+
+dl.tools { display: grid; grid-template-columns: max-content 1fr; gap: .5rem 2rem; margin: 0; }
+dl.tools dt { color: var(--muted); }
+dl.tools dd { margin: 0; }
+
+/* DESK PICTURE */
+.photo { margin: 2rem 0 0; }
+.photo img { display: block; width: 100%; height: auto; }
+.photo.missing {
+  aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;
+  background: var(--bg); border: 1px dashed #3a3a3a; color: var(--muted); font-size: .85rem;
+}
+.photo.missing::after { content: "Foto del escritorio (pendiente)"; }
+
+/* FOOTER */
+footer {
+  padding: 2.5rem 0 3rem; text-align: center;
+  background: var(--bg); border-top: 2px solid var(--accent-strong);
+  color: var(--muted); font-size: .85rem;
+}
+footer p { margin: 0 0 .5rem; text-align: center; }
+.foot-brand { color: var(--text); font-weight: 700; font-size: 1rem; letter-spacing: .02em; }
+.foot-brand span { color: var(--accent); }
+.foot-note { margin-bottom: 1.25rem; }
+.foot-meta { font-size: .8rem; margin-bottom: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+/* MOBILE */
+@media (max-width: 560px) {
+  /* HEADER NOT STICKY */
+  .site { position: static; }
+  html { scroll-padding-top: 1rem; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.1rem; }
+  .site nav a { padding: .3rem .5rem; font-size: .75rem; }
+  dl.tools { grid-template-columns: 1fr; gap: 0; }
+  dl.tools dd { margin-bottom: .75rem; }
+  .hero .wrap { flex-direction: column; text-align: center; gap: 1.5rem; }
+  .hero p { text-align: center; }
+  .hero .links { justify-content: center; }
+  .avatar-slot { width: 128px; height: 128px; }
+}

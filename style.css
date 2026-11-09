@@ -7,8 +7,8 @@
   --text: #ececec;
   --muted: #a3a3a3;
   --line: #2a2a2a;
-  --accent: #ef4444;        /* ACCENT TEXT */
-  --accent-strong: #c62828; /* ACCENT FILL */
+  --accent: #ff5a5a;        /* ACCENT TEXT */
+  --accent-strong: #dc2626; /* ACCENT FILL */
   --width: 760px;           /* CONTENT WIDTH */
   --font: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
@@ -93,7 +93,7 @@ h1 { font-size: 1.9rem; line-height: 1.2; font-weight: 700; margin: 0 0 .25rem; 
   display: inline-block; background: var(--accent-strong); color: #fff;
   padding: .6rem 1.2rem; text-decoration: none; font-weight: 500;
 }
-@media (hover: hover) { .btn:hover { background: #a82020; color: #fff; } }
+@media (hover: hover) { .btn:hover { background: #b91c1c; color: #fff; } }
 
 /* CONTACT BUTTONS */
 .contact-list { list-style: none; display: flex; flex-wrap: wrap; gap: .75rem; margin: 0; padding: 0; }

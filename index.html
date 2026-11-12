@@ -3,36 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fernanda Vergara | Pentester</title>
+  <title>Fernanda Vergara | Pentester Web y APIs</title>
   <meta name="description" content="Pentester especializada en aplicaciones web y APIs. Evaluaciones de seguridad autorizadas con informe técnico: evidencia, prueba de concepto y recomendaciones de remediación.">
-  <meta name="theme-color" content="#0d0d0d">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)">
 
   <!-- LANG LAUNCH -->
   <link rel="alternate" hreflang="es" href="https://fernandavch.com/">
   <link rel="alternate" hreflang="en" href="https://fernandavch.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://fernandavch.com/">
+  <link rel="canonical" href="https://fernandavch.com/">
 
   <!-- URL SHARE PREVIEW -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Fernanda Vergara | Pentester">
-  <meta property="og:description" content="Pentesting de aplicaciones web y APIs.">
+  <meta property="og:title" content="Fernanda Vergara | Pentester Web y APIs">
+  <meta property="og:description" content="Pentester especializada en aplicaciones web y APIs. Evaluaciones de seguridad autorizadas con informe técnico: evidencia, prueba de concepto y recomendaciones de remediación.">
   <meta property="og:url" content="https://fernandavch.com/">
-  <meta property="og:image" content="https://fernandavch.com/images/avatar.png">
 
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
 
-  <!-- ROBOTO MONO GOOGLE FONTS -->
+  <!-- THEME INIT -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+
+  <!-- FONTS GOOGLE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Electrolize&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Fernanda Vergara Chávez",
-    "jobTitle": "Pentester web",
-    "url": "https://fernandavch.com",
+    "jobTitle": "Pentester Web y APIs",
+    "url": "https://fernandavch.com/",
     "sameAs": [
       "https://github.com/fernandavch",
       "https://www.linkedin.com/in/fernandavch/"
@@ -41,212 +52,81 @@
   </script>
 </head>
 <body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <a class="skip" href="#content">Saltar al contenido</a>
 
-  <header class="site">
-    <div class="wrap">
-      <a class="brand" href="#inicio">Fernanda<span> · Portafolio de Pentesting</span></a>
-      <nav aria-label="Principal">
-        <ul>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
-          <li><a href="#formacion">Formación</a></li>
-          <li><a href="#herramientas">Herramientas</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-          <li class="lang"><a href="en/" hreflang="en" lang="en" title="English version" aria-label="English version">EN</a></li>
+  <!-- TOP BAR MOBILE -->
+  <div class="topbar">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sidebar" aria-label="Menú">
+      <svg class="b" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14"/></svg>
+      <svg class="x" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 3.5l11 11M14.5 3.5l-11 11"/></svg>
+    </button>
+    <a class="topname" href="/">Fernanda Vergara</a>
+  </div>
+  <div class="scrim"></div>
 
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="/"><span class="name">Fernanda Vergara</span><span class="sub">Pentesting · Chile</span></a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="/" aria-current="page">Inicio</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/proyectos">Proyectos</a></li>
+        <li><a href="/sobre-mi">Sobre mí</a></li>
+        <li><a href="/experiencia">Experiencia</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="controls">
+      <!-- THEME SWITCH -->
+      <div class="sw">
+        <span class="l"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3"/></svg></span>
+        <button class="tr" id="theme" type="button" role="switch" aria-checked="false" aria-label="Modo oscuro"></button>
+        <span class="r"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A5.7 5.7 0 0 1 6.4 2.5a5.7 5.7 0 1 0 7.1 7.1z"/></svg></span>
+      </div>
 
-  <main id="contenido">
-
-    <div class="hero" id="inicio">
-      <div class="wrap">
-        <!-- AVATAR -->
-        <div class="avatar-slot">
-          <img class="avatar" src="images/avatar.png" alt="Fernanda Vergara Chávez" width="144" height="144" onerror="this.parentNode.classList.add('missing'); this.remove();">
-        </div>
-        <div>
-        <h1>Fernanda Vergara Chávez</h1>
-        <p class="role">Pentester web · Seguridad ofensiva</p>
-        <p>Pentester especializada en seguridad de aplicaciones web y APIs. Documento los hallazgos con evidencia y recomendaciones de remediación.</p>
-        <div class="links">
-          <a class="btn" href="#contacto">Contactar</a>
-          <a href="https://github.com/fernandavch" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="links/cv-tecnico.html">CV técnico</a>
-        </div>
-        </div>
+      <!-- LANGUAGE SWITCH -->
+      <div class="sw">
+        <span class="l on">ES</span>
+        <a class="tr" href="/en/" hreflang="en" lang="en" title="English version" aria-label="English version"></a>
+        <span class="r">EN</span>
       </div>
     </div>
+  </aside>
 
-    <section id="sobre-mi">
-      <div class="wrap">
-        <h2>Sobre mí</h2>
-        <p>Soy pentester especializada en la seguridad ofensiva de aplicaciones web y APIs. Realizo evaluaciones de seguridad autorizadas, con pruebas manuales centradas en el control de acceso, la autenticación y la lógica de negocio, y entrego informes con evidencia, prueba de concepto y recomendaciones de remediación claras para los equipos que deben corregir.</p>
-        <p>Mi enfoque es ofensivo, pero durante mi formación también trabajé en el lado defensivo: implementé herramientas de monitoreo y un SOC en entornos de laboratorio, y realicé análisis estático y dinámico de malware.</p>
-        <p>Antes de la ciberseguridad trabajé más de diez años como game artist y diseñadora UI/UX en la industria de los videojuegos, en equipos multidisciplinarios. Desde 2023 me formo en seguridad y, desde 2026, ejerzo de forma independiente.</p>
-        <!-- DESK PICTURE -->
-        <figure class="photo">
-          <img src="images/escritorio.jpg" alt="Mi escritorio de trabajo" width="1400" height="788" onerror="this.parentNode.classList.add('missing'); this.remove();">
-        </figure>
-      </div>
-    </section>
+  <main id="content">
+    <div class="col">
+      <h1 class="title title-lg">Pentester Web y APIs</h1>
+      <p class="lead">Pentester especializada en seguridad de aplicaciones web y APIs. Documento los hallazgos con evidencia y recomendaciones de remediación.</p>
 
-    <section id="servicios">
-      <div class="wrap">
-        <h2>Servicios</h2>
-        <h3>Pentesting de aplicaciones web</h3>
-        <p class="muted">Pruebas manuales según OWASP Top 10: control de acceso, autenticación, inyecciones y fallas de lógica de negocio.</p>
-        <h3>Seguridad de APIs</h3>
-        <p class="muted">Revisión según OWASP API Security Top 10: autorización a nivel de objeto (BOLA), IDOR, autenticación débil y exposición excesiva de datos.</p>
-        <h3>Informe técnico</h3>
-        <p class="muted">Hallazgos con evidencia, prueba de concepto, severidad y recomendaciones de remediación para el equipo de desarrollo.</p>
-        <p class="meta">Cómo trabajo: alcance y autorización por escrito → reconocimiento y pruebas → informe → revisión de correcciones.</p>
-      </div>
-    </section>
-
-    <section id="proyectos">
-      <div class="wrap">
-        <h2>Proyectos</h2>
-        <p class="meta">Trabajo en laboratorios y entornos controlados.</p>
-        <ul class="plain">
-          <li>
-            <a href="https://github.com/fernandavch/crAPI-Exploitation-Lab" target="_blank" rel="noopener noreferrer">crAPI Exploitation Lab</a><br>
-            <span class="muted">Vulnerabilidades y explotación de crAPI (OWASP), con capturas y recomendaciones.</span>
-          </li>
-          <li>
-            <a href="https://github.com/fernandavch/PentestingWeb-Labs" target="_blank" rel="noopener noreferrer">Pentesting Web Labs</a><br>
-            <span class="muted">Notas y write-ups de laboratorios web (Web for Pentester).</span>
-          </li>
-          <li>
-            <a href="https://github.com/fernandavch/Writeups-Academicos" target="_blank" rel="noopener noreferrer">Write-ups académicos</a><br>
-            <span class="muted">Evaluaciones técnicas de mi formación Red Team y Blue Team.</span>
-          </li>
+      <!-- TERMINAL -->
+      <div class="term">
+        <div class="term-bar">
+          <span>work@fernandavch.com</span>
+          <span class="term-ic" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 6h8"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2.5" y="2.5" width="7" height="7"/></svg>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7"/></svg>
+          </span>
+        </div>
+        <ul class="term-list">
+          <li>Pentesting de aplicaciones web</li>
+          <li>Seguridad de APIs (OWASP API Top 10)</li>
+          <li>Informe técnico con evidencia y PoC</li>
+          <li>Revisión de correcciones</li>
         </ul>
       </div>
-    </section>
 
-    <section id="experiencia">
-      <div class="wrap">
-        <h2>Experiencia</h2>
-        <h3>Evaluadora de seguridad de aplicaciones web</h3>
-        <p class="meta">Independiente · Chile / remoto · mayo 2026 – actualidad</p>
-        <p class="muted">Evaluaciones de seguridad autorizadas para pequeñas empresas: reconocimiento, pruebas manuales del OWASP Top 10, fallas de control de acceso y de lógica de negocio, e informes técnicos con evidencia, PoC y guía de remediación. A la fecha, dos evaluaciones completadas.<!-- UPDATE NUMBER --></p>
-        <h3>Game artist y diseñadora UI/UX</h3>
-        <p class="meta">Industria de los videojuegos · 2012 – 2024</p>
-        <p class="muted">Trayectoria como game artist y diseñadora UI/UX, colaborando de forma cercana con los equipos de programación, diseño y arte. Desarrollé mi propio proyecto, Roboxel, una tienda de assets para videojuegos. También participé en la organización de una comunidad local de desarrollo de videojuegos.</p>
+      <div class="actions">
+        <a class="btn" href="/servicios">Ver servicios</a>
+        <a class="btn-outline" href="/contacto">Contacto</a>
+        <p class="status"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>Disponible para proyectos</p>
       </div>
-    </section>
-
-    <section id="formacion">
-      <div class="wrap">
-        <h2>Formación y credenciales</h2>
-        <h3>Diplomados</h3>
-        <ul class="plain">
-          <li>Diplomado en Red Team Avanzado<br><span class="meta">USACH · 2024 – abril 2026 · <a href="https://www.credential.net/0ef42e4a-0e23-4bbb-a2f0-8c6b4ba0db2b?username=fernandavch" target="_blank" rel="noopener noreferrer">Ver credencial</a></span></li>
-          <li>Diplomado en Blue Team<br><span class="meta">USACH · 2023 · <a href="https://www.credly.com/badges/17b98f1e-178c-45f3-95ea-c2028f5af504" target="_blank" rel="noopener noreferrer">Ver credencial</a></span></li>
-        </ul>
-        <h3>En preparación</h3>
-        <ul class="plain">
-          <li>eJPT <span class="meta">· INE</span></li>
-          <li>PWPT <span class="meta">· TCM Security</span></li>
-        </ul>
-        <h3>Cursos completados (selección)</h3>
-        <ul class="plain">
-          <li>Practical Web Hacking <span class="meta">· TCM Security · 2026</span></li>
-          <li>Practical Ethical Hacking <span class="meta">· TCM Security · 2026</span></li>
-          <li>OWASP API Top 10 crAPI <span class="meta">· codered · 2026</span></li>
-          <li>Pentesting Cloud AWS <span class="meta">· USACH · 2026</span></li>
-          <li>Linux System Administration Essentials (LFS207) <span class="meta">· The Linux Foundation · 2025</span></li>
-        </ul>
-        <p><a href="https://www.credential.net/profile/fernandavch/wallet" target="_blank" rel="noopener noreferrer">Ver todas las credenciales</a></p>
-      </div>
-    </section>
-
-    <section id="herramientas">
-      <div class="wrap">
-        <h2>Herramientas</h2>
-        <dl class="tools">
-          <dt>Pentesting</dt><dd>Burp Suite, Nmap, Metasploit, FFUF, Gobuster, SQLmap, Wireshark</dd>
-          <dt>Sistemas</dt><dd>Kali Linux, administración Linux, Bash, Docker, AWS CLI</dd>
-          <dt>Defensiva</dt><dd>Wazuh, Elasticsearch, iptables, Caldera, Sysinternals, PEStudio, Ghidra, Process Hacker</dd>
-
-          <dt>Metodologías</dt><dd>PTES, OWASP Top 10, OWASP API Top 10</dd>
-        </dl>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <div class="wrap">
-        <h2>Contacto</h2>
-        <p>Estoy abierta a consultas sobre evaluaciones de seguridad de aplicaciones web y APIs, a oportunidades laborales y a conversar con otras personas del área.</p>
-        <ul class="contact-list">
-          <li><a href="mailto:work@fernandavch.com">Escríbeme un correo</a></li>
-          <li><a href="https://www.linkedin.com/in/fernandavch/" target="_blank" rel="noopener noreferrer">Conectemos en LinkedIn</a></li>
-          <li><a href="https://github.com/fernandavch" target="_blank" rel="noopener noreferrer">Revisa mi GitHub</a></li>
-        </ul>
-      </div>
-    </section>
-
+    </div>
+    <footer class="foot">
+      <p>Solo realizo pruebas con autorización por escrito y dentro de un alcance acordado.</p>
+      <p>© 2026 Fernanda Vergara Chávez</p>
+    </footer>
   </main>
-
-  <footer>
-    <div class="wrap">
-      <p class="foot-brand">Fernanda<span> · Portafolio de Pentesting</span></p>
-      <p class="foot-note">Solo realizo pruebas con autorización por escrito y dentro de un alcance acordado.</p>
-      <p class="foot-meta"><a href="#inicio">Volver arriba ↑</a><span aria-hidden="true"> · </span>© 2026 Fernanda Vergara Chávez</p>
-    </div>
-  </footer>
-
-  <script>
-    /* MENU BEHAVIOR */
-    (function () {
-      var header = document.querySelector('.site');
-      var links = Array.prototype.slice.call(document.querySelectorAll('.site nav a[href^="#"]'));
-      var items = links.map(function (a) {
-        return { a: a, s: document.querySelector(a.getAttribute('href')) };
-      }).filter(function (i) { return i.s; });
-      var sections = Array.prototype.slice.call(document.querySelectorAll('main > section'));
-      var lockUntil = 0;
-
-      function setActive(a) {
-        links.forEach(function (l) {
-          if (l === a) { l.classList.add('active'); l.setAttribute('aria-current', 'true'); }
-          else { l.classList.remove('active'); l.removeAttribute('aria-current'); }
-        });
-      }
-      /* HEADER HEIGHT */
-      function headerH() {
-        return getComputedStyle(header).position === 'sticky' ? header.offsetHeight : 0;
-      }
-      function sizePadding() {
-        document.documentElement.style.scrollPaddingTop = headerH() + 'px';
-      }
-      function update() {
-        if (Date.now() < lockUntil) return;
-        var offset = headerH() + window.innerHeight * 0.25;
-        var current = null;           /* VISIBLE SECTION */
-        sections.forEach(function (s) {
-          if (s.getBoundingClientRect().top <= offset) current = s;
-        });
-        var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-        if (atBottom && sections.length) current = sections[sections.length - 1];
-        var match = items.filter(function (i) { return i.s === current; })[0];
-        setActive(match ? match.a : null);
-      }
-
-      links.forEach(function (a) {
-        a.addEventListener('click', function () { setActive(a); lockUntil = Date.now() + 600; });
-      });
-      window.addEventListener('scroll', update, { passive: true });
-      window.addEventListener('resize', function () { sizePadding(); update(); });
-      sizePadding();
-      update();
-    })();
-  </script>
 </body>
 </html>

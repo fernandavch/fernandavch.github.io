@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernanda Vergara Chávez | Technical CV</title>
+  <meta name="description" content="Technical CV of Fernanda Vergara Chávez, web and API pentester: profile, experience, education, certifications and tools.">
+
+  <!-- LANG LAUNCH -->
+  <link rel="alternate" hreflang="es" href="https://fernandavch.com/cv-tecnico">
+  <link rel="alternate" hreflang="en" href="https://fernandavch.com/en/technical-cv">
+
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- THEME INIT -->
+  <script>
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+
+  <!-- FONTS GOOGLE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Electrolize&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+
+  <style>
+    /* COLORS */
+    :root {
+      --bg: #ffffff;
+      --bd: #e2e2e2;
+      --text: #3d3d3d;
+      --muted: #666666;
+      --track: #ececec;
+      --red: #e03136;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0d0d0d;
+        --bd: #2a2a2a;
+        --text: #cfcfcf;
+        --muted: #9a9a9a;
+        --track: #222222;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0d0d0d;
+      --bd: #2a2a2a;
+      --text: #cfcfcf;
+      --muted: #9a9a9a;
+      --track: #222222;
+      color-scheme: dark;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; border-radius: 0; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+
+    a { color: var(--red); text-underline-offset: 3px; }
+    :focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+    /* TOP BAR */
+    .topbar { border-bottom: 1px solid var(--bd); }
+    .topbar .in {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+    .back { color: var(--muted); text-decoration: none; font-size: 13px; }
+    @media (hover: hover) { .back:hover { color: var(--text); } }
+
+    /* SWITCHES */
+    .ctrls { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+    .sw {
+      display: grid;
+      grid-template-columns: 18px 46px 18px;
+      column-gap: 10px;
+      align-items: center;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .sw .l { display: flex; justify-content: flex-end; }
+    .sw .r { display: flex; justify-content: flex-start; }
+    .sw svg { display: block; }
+    .sw .on { color: var(--text); font-weight: 500; }
+    .tr {
+      display: block;
+      position: relative;
+      width: 46px;
+      height: 22px;
+      padding: 0;
+      border: 1px solid var(--bd);
+      background: var(--track);
+      cursor: pointer;
+      font: inherit;
+    }
+    .tr::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 14px;
+      height: 14px;
+      background: var(--red);
+      transition: left .15s;
+    }
+    .tr[aria-checked="true"]::after, .tr.end::after { left: 27px; }
+
+    /* CONTENT WRAP */
+    .cv { max-width: 760px; margin: 0 auto; padding: 40px 20px 32px; }
+
+    /* HEADER */
+    h1 {
+      margin: 0 0 6px;
+      font-family: "Electrolize", "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 1.1;
+      -webkit-text-stroke: .8px currentColor;
+    }
+    .role { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
+    .contact { margin: 0; color: var(--muted); font-size: 13px; }
+    .contact span + span::before { content: " · "; }
+
+    /* SECTIONS */
+    h2 {
+      margin: 36px 0 16px;
+      padding-top: 22px;
+      border-top: 1px solid var(--bd);
+      font-family: "Electrolize", "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--red);
+      -webkit-text-stroke: .5px currentColor;
+    }
+    p { margin: 0 0 14px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
+    /* ENTRIES */
+    .entry { margin: 0 0 20px; break-inside: avoid; }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px 20px;
+      flex-wrap: wrap;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .entry-head .date { font-weight: 400; color: var(--muted); white-space: nowrap; }
+    .entry-sub { margin: 2px 0 6px; color: var(--muted); font-size: 13px; }
+    .entry p { margin: 0 0 6px; color: var(--muted); }
+    .entry .extra { margin: 0; color: var(--muted); }
+
+    /* SKILLS */
+    .skills { display: grid; grid-template-columns: max-content 1fr; gap: 10px 28px; margin: 0; }
+    .skills dt { color: var(--muted); }
+    .skills dd { margin: 0; }
+
+    /* FOOTER */
+    footer {
+      margin-top: 44px;
+      padding-top: 14px;
+      border-top: 1px solid var(--bd);
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* MOBILE */
+    @media (max-width: 560px) {
+      .cv { padding-top: 32px; }
+      h1 { font-size: 28px; }
+      p { text-align: left; }
+      .skills { grid-template-columns: 1fr; gap: 0; }
+      .skills dd { margin-bottom: 12px; }
+    }
+
+    /* PRINT */
+    @media print {
+      :root { --bg: #fff; --bd: #ccc; --text: #222; --muted: #555; }
+      .topbar { display: none; }
+      .cv { max-width: none; padding: 0; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="in">
+      <a class="back" href="/en/">← Home</a>
+
+      <div class="ctrls">
+        <!-- THEME SWITCH -->
+        <div class="sw">
+          <span class="l"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3"/></svg></span>
+          <button class="tr" id="theme" type="button" role="switch" aria-checked="false" aria-label="Dark mode"></button>
+          <span class="r"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A5.7 5.7 0 0 1 6.4 2.5a5.7 5.7 0 1 0 7.1 7.1z"/></svg></span>
+        </div>
+
+        <!-- LANGUAGE SWITCH -->
+        <div class="sw">
+          <span class="l">ES</span>
+          <a class="tr end" href="/cv-tecnico" hreflang="es" lang="es" title="Versión en español" aria-label="Versión en español"></a>
+          <span class="r on">EN</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="cv">
+
+    <header>
+      <h1>Fernanda Vergara Chávez</h1>
+      <p class="role">Web and API Pentester</p>
+      <p class="contact">
+        <span>Puerto Varas, Chile</span>
+        <span><a href="mailto:work@fernandavch.com">work@fernandavch.com</a></span>
+        <span><a href="https://fernandavch.com/en/">fernandavch.com</a></span>
+        <span><a href="https://github.com/fernandavch" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        <span><a href="https://www.linkedin.com/in/fernandavch/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+      </p>
+    </header>
+
+    <section id="profile">
+      <h2>Profile</h2>
+      <p>Pentester specialized in web application and API security. I carry out authorized security assessments, with manual testing based on recognized methodologies (OWASP Top 10, OWASP API Security Top 10 and PTES), and deliver reports with evidence, proof of concept and clear remediation recommendations for the teams that have to fix the issues.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-head"><span>Web application security assessor</span><span class="date">May 2026 – present</span></div>
+        <div class="entry-sub">Independent · Chile / remote</div>
+        <!-- UPDATE NUMBER -->
+        <p>Authorized security assessments for small businesses: reconnaissance, manual testing of the OWASP Top 10, access control and business logic flaws, and technical reports with evidence, PoC and remediation guidance. To date, two assessments completed.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>Web Pentesting Labs</span><span class="date">present</span></div>
+        <div class="entry-sub">Write-ups and PoC · <a href="https://github.com/fernandavch" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+        <p>Technical documentation of vulnerability exploitation in controlled environments such as crAPI and Web for Pentester. Use of a “Markdown First” approach for evidence management.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education and certifications</h2>
+
+      <div class="entry">
+        <div class="entry-head"><span>Advanced Red Team Diploma</span><span class="date">2024 – April 2026</span></div>
+        <div class="entry-sub">University of Santiago de Chile (USACH)</div>
+        <p>Featured modules: Advanced Web Pentesting, OSINT Tools and Techniques for Red Team, Security System Evasion Techniques and Malware Development, Cloud Pentesting (AWS).</p>
+        <p class="extra"><a href="https://www.credential.net/0ef42e4a-0e23-4bbb-a2f0-8c6b4ba0db2b?username=fernandavch" target="_blank" rel="noopener noreferrer">View credential</a></p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>Blue Team Diploma</span><span class="date">2023</span></div>
+        <div class="entry-sub">University of Santiago de Chile (USACH)</div>
+        <p>Modules: Threat Intelligence Techniques for Cyber Defense, ISO 27035 Lead Implementer, Incident Response Techniques for CSIRT and SOC Monitoring Center Implementer.</p>
+        <p class="extra">Outstanding student · <a href="https://www.credly.com/badges/3ce42594-c8b3-4921-8c95-1b5579c29364" target="_blank" rel="noopener noreferrer">View verified credential</a><br>
+        <a href="https://www.credly.com/badges/17b98f1e-178c-45f3-95ea-c2028f5af504" target="_blank" rel="noopener noreferrer">View diploma credential</a></p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span>eJPT</span><span class="date">in progress</span></div>
+        <div class="entry-sub">INE</div>
+        <p>Active preparation for the Junior Penetration Tester certification.</p>
+      </div>
+
+      <p><a href="https://www.credential.net/profile/fernandavch/wallet" target="_blank" rel="noopener noreferrer">View all credentials</a></p>
+    </section>
+
+    <section id="tools">
+      <h2>Tools</h2>
+      <dl class="skills">
+        <dt>Pentesting</dt><dd>Burp Suite, Nmap, Metasploit, FFUF, Gobuster, SQLmap, Wireshark</dd>
+        <dt>Systems</dt><dd>Kali Linux, Linux administration, Bash, Docker, AWS CLI</dd>
+        <dt>Defensive</dt><dd>Wazuh, Elasticsearch, iptables, Caldera, Sysinternals, PEStudio, Ghidra, Process Hacker</dd>
+        <dt>Methodologies</dt><dd>PTES, OWASP Top 10, OWASP API Top 10</dd>
+      </dl>
+    </section>
+
+    <footer>© 2026 Fernanda Vergara Chávez</footer>
+  </main>
+
+  <script>
+    /* THEME SWITCH */
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('theme');
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function isDark() {
+        var t = root.getAttribute('data-theme');
+        return t ? t === 'dark' : mq.matches;
+      }
+      function sync() { btn.setAttribute('aria-checked', isDark()); }
+
+      btn.addEventListener('click', function () {
+        var next = isDark() ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync();
+      });
+      if (mq.addEventListener) mq.addEventListener('change', sync);
+      sync();
+    })();
+  </script>
+</body>
+</html>

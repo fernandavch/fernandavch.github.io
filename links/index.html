@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0d0d0d">
+  <title>Fernanda Vergara Chávez | Web and API Pentester</title>
+  <meta name="description" content="Links of Fernanda Vergara Chávez, web and API pentester: website, GitHub, LinkedIn, technical CV and credentials.">
+
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- FONTS GOOGLE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Electrolize&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap">
+
+  <style>
+    /* COLORS DARK ONLY */
+    :root {
+      --bg: #0d0d0d;
+      --bg-alt: #151515;
+      --text: #cfcfcf;
+      --muted: #9a9a9a;
+      --green: #3fb950;
+      --red: #e03136;
+      --red-line: rgba(224, 49, 54, .4);
+      --glow: rgba(224, 49, 54, .55);
+      color-scheme: dark;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    .container { width: 90%; max-width: 400px; text-align: center; }
+
+    /* HEADER */
+    header {
+      margin-bottom: 25px;
+      padding: 15px;
+      border: 1px solid var(--red-line);
+      background: var(--bg-alt);
+    }
+    h1 {
+      margin: 0;
+      font-family: "Electrolize", "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      -webkit-text-stroke: .4px currentColor;
+    }
+    .subtitle {
+      margin-top: 8px;
+      font-size: .75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .divider {
+      width: 80%;
+      height: 2px;
+      margin: 15px auto 0;
+      background: linear-gradient(to right, transparent, var(--red), transparent);
+    }
+
+    /* LINKS */
+    .link-block {
+      display: block;
+      margin-bottom: 12px;
+      padding: 15px;
+      background: var(--red);
+      border: 2px solid var(--red);
+      color: var(--bg);
+      text-decoration: none;
+      font-family: "JetBrains Mono", ui-monospace, Consolas, monospace;
+      font-weight: 600;
+      font-size: 13.8px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    }
+
+    /* HOVER MOUSE ONLY */
+    @media (hover: hover) {
+      .link-block:hover {
+        background: var(--bg);
+        color: var(--red);
+        box-shadow: 0 0 20px var(--glow);
+        transform: scale(1.03);
+      }
+      .mail:hover { color: var(--red); }
+    }
+    :focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+
+    /* FOOTER */
+    footer {
+      margin-top: 30px;
+      font-family: "JetBrains Mono", ui-monospace, Consolas, monospace;
+      font-size: .7rem;
+      letter-spacing: 2px;
+      color: var(--muted);
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }
+    .status svg { color: var(--green); }
+    .mail { color: var(--muted); text-underline-offset: 3px; letter-spacing: 1px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .link-block { transition: none; }
+      .link-block:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Fernanda Vergara Chávez</h1>
+      <div class="subtitle">Web and API Pentester</div>
+      <div class="divider"></div>
+    </header>
+
+    <nav aria-label="Links">
+      <a class="link-block" href="https://fernandavch.com/en/">Website</a>
+      <a class="link-block" href="https://github.com/fernandavch" target="_blank" rel="noopener noreferrer">GitHub Portfolio</a>
+      <a class="link-block" href="https://www.linkedin.com/in/fernandavch/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+      <a class="link-block" href="/en/technical-cv">Technical CV</a>
+      <a class="link-block" href="https://www.credential.net/profile/fernandavch/wallet" target="_blank" rel="noopener noreferrer">Accredible Certs</a>
+      <a class="link-block" href="https://www.credly.com/users/fernandavch/" target="_blank" rel="noopener noreferrer">Credly Badges</a>
+    </nav>
+
+    <footer>
+      <p class="status">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>
+        Available for hire
+      </p>
+      <a class="mail" href="mailto:work@fernandavch.com">work@fernandavch.com</a>
+    </footer>
+  </div>
+
+</body>
+</html>
